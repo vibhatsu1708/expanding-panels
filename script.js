@@ -1,16 +1,17 @@
-const panels = document.querySelectorAll('.panel'); //creating a panels constant, to select all the '.panel' divs
-panels.forEach ( //looping through each and every panel div.
+const panels = document.querySelectorAll(".panel");
+
+panels.forEach (
     panel => {
-        panel.addEventListener ( //adding an event listener, to perform an action when clicked.
+        panel.addEventListener (
             'click', () => {
-                removeActiveClasses()
-                panel.classList.add('active'); //when panel clicked, it should behave like the active panel
+                removeActiveClasses ();
+                panel.classList.add('active');
             }
         )
     }
 )
 
-function removeActiveClasses () {
+removeActiveClasses = () => {
     panels.forEach (
         panel => {
             panel.classList.remove('active');
